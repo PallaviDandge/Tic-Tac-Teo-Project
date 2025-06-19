@@ -1,0 +1,152 @@
+/* App Section */
+
+/* style.css */
+.app {
+  justify-content: center;
+  background-color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  margin-top: 30px;
+}
+
+h1 {
+  color: #6a1b9a;
+  margin-bottom: 20px;
+}
+
+/* Game Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 0 auto 20px;
+}
+
+.cell {
+  background-color: #e7cbec;
+  border: 2px solid #6a1b9a;
+  border-radius: 10px;
+  height: 100px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1f0045;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.cell:hover {
+  background-color: #e1bee7;
+}
+
+/* Status Message */
+.status {
+  font-size: 1.2rem;
+  color: #100338;
+  margin-bottom: 10px;
+}
+
+/* Restart Button */
+.restart {
+  padding: 10px 20px;
+  background-color: #7d0d0d;
+  color: white;
+  border: none;
+  border-radius: 35px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+.restart:hover {
+  background-color: #260205;
+}
+
+
+.gameHistoryWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+    margin-left: 30px;
+
+}
+
+.gameHistory {
+display: flex;
+gap: 10px;
+
+} 
+
+ .gameHistory h2 {
+  color: #faf7f7;
+} 
+
+
+
+.downloadBtn {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  margin: 19px  ;
+}
+
+.downloadBtn:hover {
+  background-color: #8e24aa;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cell {
+    height: 70px;
+    font-size: 2rem;
+  }
+
+  .restart {
+    width: 100%;
+  }
+
+  .status {
+    font-size: 1rem;
+  }
+}
+
+
+
+.winner-popover {
+  position: fixed;
+  top: 40%;
+  left: 53%;
+  transform: translate(-50%, -50%) scale(0.8);
+  padding: 20px 40px;
+  background-color: rgba(2, 25, 23, 0.95);
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  opacity: 0;
+  animation: popIn 0.6s ease forwards;
+}
+
+@keyframes popIn {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}

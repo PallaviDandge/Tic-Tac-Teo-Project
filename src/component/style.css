@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  animation: gradientShift 15s ease infinite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 50% 50%; }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* force full screen on mobile/tablet */
+    padding: 10px;
+  }
+}
+
+
+
+
+.auth-form {
+  background: linear-gradient(145deg, #e0e0e0, #f9f9f9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow:
+    8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.7);
+  width: 300px;
+  text-align: center;
+  position:relative;
+  box-shadow:
+    inset 2px 2px 5px rgba(255, 255, 255, 0.8),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.1),
+    8px 8px 15px rgba(0, 0, 0, 0.1),
+    -8px -8px 15px rgba(255, 255, 255, 0.7);
+    margin-left: 150%;
+    margin-top:40%;
+}
+
+
+.auth-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.auth-form input {
+  display: block;
+  width: 93%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.auth-form button {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 50%;
+  border-radius: 25px;
+}
+
+
+.auth-form button:hover {
+  background-color: #8e24aa;
+}
+
+/* src/component/BackgroundWrapper.css */
+
+.background-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-bg {
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-position: center;
+}
