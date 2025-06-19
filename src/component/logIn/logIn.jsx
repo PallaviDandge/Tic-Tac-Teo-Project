@@ -1,6 +1,6 @@
 // src/component/logIn/LogIn.jsx
 import React from "react";
-import "../style.css";
+import "../../App.css";
 import { useNavigate } from "react-router-dom";
 
 function LogIn({ onAuthSuccess }) {
